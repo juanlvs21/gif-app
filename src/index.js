@@ -5,6 +5,7 @@ import GifApp from "./GifApp";
 import reportWebVitals from "./reportWebVitals";
 
 import "./index.css";
+import "water.css/out/dark.min.css";
 
 ReactDOM.render(
   <React.StrictMode>
