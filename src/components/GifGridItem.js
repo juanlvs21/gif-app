@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const GifGridItem = ({ url, title }) => {
   return (
-    <div>
+    <div className="card animate__animated animate__bounceIn">
       <img src={url} alt={title} />
     </div>
   );
