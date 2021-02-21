@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en el componente GifSearch Cargar componente GifSearch correctamente 1`] = `
+<Fragment>
+  <h2>
+    GifApp
+  </h2>
+  <GifSearch
+    setCategories={[Function]}
+  />
+  <hr />
+  <ol />
+</Fragment>
+`;
+
+exports[`Pruebas en el componente GifSearch Debe mostrar una lista de categorias 1`] = `
+<Fragment>
+  <h2>
+    GifApp
+  </h2>
+  <GifSearch
+    setCategories={[Function]}
+  />
+  <hr />
+  <ol>
+    <GifGrid
+      category="Tomioka"
+      key="Tomioka"
+    />
+    <GifGrid
+      category="Senku"
+      key="Senku"
+    />
+  </ol>
+</Fragment>
+`;

@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import Item from "./GifGridItem";
+import GifGridItem from "./GifGridItem";
 import Spinner from "./Spinner";
 
-import { useFetchGift } from "../hooks/useFetchGifs";
+import { useFetchGifs } from "../hooks/useFetchGifs";
 
 const GifGrid = ({ category }) => {
-  const { data: images, loading } = useFetchGift(category);
+  const { data: images, loading } = useFetchGifs(category);
 
   return (
     <>
@@ -18,7 +18,7 @@ const GifGrid = ({ category }) => {
 
       <div className="card-grid">
         {images.map((img) => (
-          <Item {...img} key={img.id} />
+          <GifGridItem {...img} key={img.id} />
         ))}
       </div>
     </>

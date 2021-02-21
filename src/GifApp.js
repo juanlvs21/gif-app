@@ -1,15 +1,16 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 
-import Search from "./components/GifSearch";
+import GifSearch from "./components/GifSearch";
 import GifGrid from "./components/GifGrid";
 
-const GifApp = () => {
-  const [categories, setCategories] = useState(["Naruto"]);
+const GifApp = ({ defaultCategories = [] }) => {
+  const [categories, setCategories] = useState(defaultCategories);
 
   return (
     <>
       <h2>GifApp</h2>
-      <Search setCategories={setCategories} />
+      <GifSearch setCategories={setCategories} />
       <hr />
 
       <ol>
@@ -19,6 +20,10 @@ const GifApp = () => {
       </ol>
     </>
   );
+};
+
+GifApp.prototype = {
+  defaultCategories: PropTypes.array,
 };
 
 export default GifApp;
